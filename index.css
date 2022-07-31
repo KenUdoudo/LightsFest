@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  width: 100%;
+  /*height: 100vh;*/
+  background: black;
+}
+svg {
+  font-size: 150px;
+  padding-top: 11%;
+}
+.copy {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-dasharray: 8% 30%;
+  stroke-dashoffset: 0%;
+  animation: textanimation 6s linear infinite;
+}
+@keyframes textanimation {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+.copy1 {
+  stroke: #f70606;
+  animation-delay: -1s;
+}
+.copy2 {
+  stroke: #1402b6;
+  animation-delay: -2s;
+}
+.copy3 {
+  stroke: #fdf91a;
+  animation-delay: -3s;
+}
+.copy4 {
+  stroke: #12ddf8;
+  animation-delay: -4s;
+}
+.copy5 {
+  stroke: #07a301;
+  animation-delay: -5s;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-template-rows: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.box {
+  height: 340px;
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+.box:hover {
+  transform: translateY(-20px);
+}
+.in {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+.Locations {
+  background: #1402b686;
+  border-radius: 10px;
+}
+.Music {
+  background: #f7060693;
+  border-radius: 10px;
+}
+.Games {
+  background: #12ddf888;
+  border-radius: 10px;
+}
+.Merch {
+  background: #fdf91a81;
+  border-radius: 10px;
+}
+body {
+  background: rgba(0, 0, 0, 0.993);
+}
+@media screen and (max-width: 425px) {
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .in {
+    left: 20px;
+    font-size: 16px;
+  }
+  .box {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .content {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 320px) {
+}
